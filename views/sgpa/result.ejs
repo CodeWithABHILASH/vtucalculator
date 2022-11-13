@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate cgpa</title>
+</head>
+<body>
+    <form action="/resultcgpa" method="get">
+      
+      
+        <label for="sem1">semester 1</label>
+        <input type="number" name="s1" id="sem1" min="0" max="10" step="any" value="<%=obj.s1 %>">
+        <label for="sem2">semester 2</label>
+        <input type="number" name="s2" id="sem2" min="0" max="10" step="any" value="<%=obj.s2 %>">
+        <label for="sem3">semester 3</label>
+        <input type="number" name="s3" id="sem3" min="0" max="10" step="any" value="<%=obj.s3 %>">
+        <label for="sem4">semester 4</label>
+        <input type="number" name="s4" id="sem4" min="0" max="10" step="any"value="<%=obj.s4 %>">
+        <label for="sem5">semester 5</label>
+        <input type="number" name="s5" id="sem5" min="0" max="10" step="any" value="<%=obj.s5 %>">
+        <label for="sem6">semester 6</label>
+        <input type="number" name="s6" id="sem6" min="0" max="10" step="any" value="<%=obj.s6 %>">
+        <label for="sem7">semester 7</label>
+        <input type="number" name="s7" id="sem7" min="0" max="10" step="any" value="<%=obj.s7 %>">
+        <label for="sem8">semester 8</label>
+        <input type="number" name="s8" id="sem8" min="0" max="10" step="any" value="<%=obj.s8 %>">
+
+        <button>Calculate cgpa</button>
+    </form>
+    <h1><%=finalresult %> </h1>
+    <button><a href="/home">home</a></button>
+</body>
+</html> -->
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+
+<header class="text-white bg-slate-900 body-font">
+    <div class="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
+        <a class="flex items-center mb-4 font-medium text-white title-font md:mb-0">
+
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-10 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+            </svg>
+
+
+
+
+
+            <span class="ml-3 text-xl">VTU CALCULATOR</span>
+        </a>
+        <nav class="flex flex-wrap items-center justify-center text-base md:ml-auto">
+            <a class="mr-5 hover:text-red-600" href="/home">HOME</a>
+            <a class="mr-5 hover:text-red-600" href="/home">BACK</a>
+
+
+        </nav>
+
+
+
+    </div>
+</header>
+
+<body class="bg-gray-800">
+    
+    <form action="/resultcgpa">
+        <fieldset>
+            <section class="relative text-gray-600 body-font">
+                <div class="container px-5 py-24 mx-auto">
+                    <div class="flex flex-col w-full mb-12 text-center">
+                        <h1 class="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font"
+                            style="color:#c7af15;" href=""><b>CALCULATE YOUR CGPA</b></h1>
+                            <h3 class="mb-4 text-sm font-medium text-gray-900 sm:text-3xl title-font"  style="color:#c7af15;" href=""><b> Result:<%=finalresult %>  Percentage:<%=per %>% </b></h3>
+
+                    </div>
+                    <div class="mx-auto lg:w-1/2 md:w-2/3">
+                        <div class="flex flex-wrap -m-2">
+                            <div class="w-1/2 p-2">
+                                <div class="relative">
+                                    <label for="sem1" class="text-sm leading-7 text-red-600"><b>1ST
+                                            SEMESTER</b></label>
+                                    <input type="number" id="sem1" name="s1"
+                                        class="w-full px-3 py-1 text-base leading-8 text-gray-900 transition-colors duration-200 ease-in-out bg-gray-100 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-Neutral-800 focus:ring-2 focus:ring-indigo-200" min="0" max="10" step="any" value="<%=obj.s1 %>">
+                                </div>
+                            </div>
+                            <div class="w-1/2 p-2">
+                                <div class="relative">
+                                    <label for="sem2" class="text-sm leading-7 text-red-600"><b>2ND
+                                            SEMESTER</b></label>
+                                    <input type="number" id="sem2" name="s2"
+                                        class="w-full px-3 py-1 text-base leading-8 text-gray-900 transition-colors duration-200 ease-in-out bg-gray-100 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" min="0" max="10" step="any" value="<%=obj.s2 %>">
+                                </div>
+                            </div>
+                            <div class="w-1/2 p-2">
+                                <div class="relative">
+                                    <label for="sem3" class="text-sm leading-7 text-red-600"><b>3RD
+                                            SEMESTER</b></label>
+                                    <input type="number" id="sem3" name="s3"
+                                        class="w-full px-3 py-1 text-base leading-8 text-gray-900 transition-colors duration-200 ease-in-out bg-gray-100 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" min="0" max="10" step="any" value="<%=obj.s3 %>">
+                                </div>
+                            </div>
+                            <div class="w-1/2 p-2">
+                                <div class="relative">
+                                    <label for="sem4" class="text-sm leading-7 text-red-600"><b>4TH
+                                            SEMESTER</b></label>
+                                    <input type="number" id="sem4" name="s4"
+                                        class="w-full px-3 py-1 text-base leading-8 text-gray-900 transition-colors duration-200 ease-in-out bg-gray-100 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" min="0" max="10" step="any" value="<%=obj.s4 %>">
+                                </div>
+                            </div>
+                            <div class="w-1/2 p-2">
+                                <div class="relative">
+                                    <label for="sem5" class="text-sm leading-7 text-red-600"><b>5TH
+                                            SEMESTER</b></label>
+                                    <input type="number" id="sem5" name="s5"
+                                        class="w-full px-3 py-1 text-base leading-8 text-gray-900 transition-colors duration-200 ease-in-out bg-gray-100 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" min="0" max="10" step="any" value="<%=obj.s5 %>">
+                                </div>
+                            </div>
+                            <div class="w-1/2 p-2">
+                                <div class="relative">
+                                    <label for="sem6" class="text-sm leading-7 text-red-600"><b>6TH
+                                            SEMESTER</b></label>
+                                    <input type="number" id="sem6" name="s6"
+                                        class="w-full px-3 py-1 text-base leading-8 text-gray-900 transition-colors duration-200 ease-in-out bg-gray-100 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" min="0" max="10" step="any" value="<%=obj.s6 %>">
+                                </div>
+                            </div>
+                            <div class="w-1/2 p-2">
+                                <div class="relative">
+                                    <label for="sem7" class="text-sm leading-7 text-red-600"><b>7TH
+                                            SEMESTER</b></label>
+                                    <input type="number" id="sem7" name="s7"
+                                        class="w-full px-3 py-1 text-base leading-8 text-gray-900 transition-colors duration-200 ease-in-out bg-gray-100 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" min="0" max="10" step="any" value="<%=obj.s7 %>">
+                                </div>
+                            </div>
+                            <div class="w-1/2 p-2">
+                                <div class="relative">
+                                    <label for="sem8" class="text-sm leading-7 text-red-600"><b>8TH
+                                            SEMESTER</b></label>
+                                    <input type="number" id="sem8" name="s8"
+                                        class="w-full px-3 py-1 text-base leading-8 text-gray-900 transition-colors duration-200 ease-in-out bg-gray-100 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" min="0" max="10" step="any" value="<%=obj.s8 %>">
+                                </div>
+                            </div>
+
+                            <div class="w-full p-2">
+                                <button
+                                    class="flex px-8 py-2 mx-auto text-lg text-white bg-red-500 border-0 rounded focus:outline-none hover:bg-green-600">CALCULATE
+                                    CGPA</button>
+                            </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </section>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

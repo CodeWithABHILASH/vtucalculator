@@ -1,0 +1,93 @@
+
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <title>Login</title>
+</head>
+
+<header class="text-white bg-slate-900 body-font">
+  <div class="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
+    <a class="flex items-center mb-4 font-medium text-white title-font md:mb-0">
+
+
+
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+      </svg>
+
+
+
+
+
+      <span class="ml-3 text-xl">VTU CALCULATOR</span>
+    </a>
+    <nav class="flex flex-wrap items-center justify-center text-base md:ml-auto">
+      <a class="mr-5 hover:text-red-600" href="/home">HOME</a>
+      <a class="mr-5 hover:text-red-600" href="/home">BACK</a>
+
+    </nav>
+
+
+  </div>
+</header>
+
+<body class="bg-gray-800">
+
+  <form action="/register" method="post">
+    <fieldset>
+      <section class="relative text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div
+            class="w-full p-6 m-auto bg-white border-t-4 border-gray-800 rounded-md shadow-md border-top lg:max-w-md md:max-w-sm sm:max-w-xs">
+            <h1 class="text-3xl font-semibold text-center text-red-700">SIGN UP</h1>
+            <h3 class="mb-4 text-sm font-medium text-center text-gray-900 sm:text-lg title-font"  style="color:#e6110af5;" href=""><b><%=error %></b></h3>
+            <form class="mt-6">
+              <div>
+                <label for="username" class="block text-lg text-gray-800">Username</label>
+                <input type="text"
+                id="username" name="username"
+                  class="block w-full px-4 py-2 mt-2 bg-white border rounded-md text-black-700 focus:border-black-400 focus:ring-black-300 focus:outline-none focus:ring-2 focus:border-indigo-300 " required>
+              </div>
+              <div>
+                <label for="password" class="block text-lg text-gray-800">Password</label>
+                <input type="password" name="password"
+                  id="password" class="block w-full px-4 py-2 mt-2 bg-white border rounded-md text-black-700 focus:border-black-400 focus:ring-black-300 focus:outline-none focus:ring-2 focus:border-indigo-300" required>
+              </div>
+              <div class="mt-4">
+
+
+                <div>
+                  <button
+                    class="w-full px-8 py-2 mx-auto text-lg text-white bg-red-500 border-0 rounded focus:outline-none hover:bg-green-600">SIGN UP</button>
+                </div>
+
+            </form>
+
+
+          </div>
+          <div class="w-full p-2 pt-8 mt-8 text-center border-t border-gray-600">
+           
+          
+            <span >Already have an account?  <a class="mr-5 text-red-500 hover:text-red-600" href="/login">LOGIN</a> 
+            
+            </span>
+         
+
+          </div>
+        </div>
+      </section>
+    </fieldset>
+  </form>
+
+</body>
+
+</html>
